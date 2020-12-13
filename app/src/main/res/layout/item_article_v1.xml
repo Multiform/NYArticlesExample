@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardArticle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/bg_article"
+    android:elevation="12dp">
+
+    <TextView
+        android:id="@+id/titleArticle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/base_margin"
+        android:layout_marginTop="@dimen/base_margin"
+        android:layout_marginEnd="@dimen/base_margin"
+        android:background="@color/backgroundColorDark"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-medium"
+        android:lines="1"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="TITLE" />
+
+    <TextView
+        android:id="@+id/dateArticle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/base_margin"
+        android:layout_marginEnd="@dimen/base_margin"
+        android:background="@color/backgroundColorDark"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-condensed-light"
+        android:lines="1"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageArticle"
+        app:layout_constraintTop_toTopOf="@id/imageArticle"
+        tools:text="13.04.20" />
+
+    <TextView
+        android:id="@+id/categoriesArticle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/base_margin"
+        android:layout_marginTop="@dimen/base_margin"
+        android:layout_marginEnd="@dimen/base_margin"
+        android:background="@color/backgroundColorDark"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:maxLines="10"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageArticle"
+        app:layout_constraintTop_toBottomOf="@id/dateArticle"
+        tools:text="#Politic\n#Games\n#Movies\n#History\n#e.g." />
+
+    <ImageView
+        android:id="@+id/imageArticle"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="@dimen/base_margin"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_progress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleArticle"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/authorArticle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/base_margin"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="@dimen/base_margin"
+        android:background="@color/backgroundColorDark"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-light"
+        android:lines="1"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageArticle"
+        tools:text="Mike Miller" />
+
+    <TextView
+        android:id="@+id/subtitleArticle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/base_margin"
+        android:background="@color/backgroundColorDark"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/authorArticle"
+        tools:text="Subtitle" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/linkArticle"
+        android:layout_width="129dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/base_margin"
+        android:clickable="true"
+        android:focusable="true"
+        android:linksClickable="true"
+        android:text="Reed on"
+        app:cornerRadius="10dp"
+        app:icon="@drawable/ic_nytimes"
+        app:iconGravity="end"
+        app:iconSize="19dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtitleArticle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
